@@ -1,10 +1,10 @@
-package com.mtorres6739codefellowship.mtorres6739codefellowship;
+package com.mtorres6739codefellowship.codefellowship;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Mtorres6739codefellowshipApplicationTests {
+class CodefellowshipApplicationTests {
 
 	@Test
 	void contextLoads() {

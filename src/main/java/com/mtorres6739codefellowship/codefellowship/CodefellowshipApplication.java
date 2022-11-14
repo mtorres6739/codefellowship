@@ -1,13 +1,13 @@
-package com.mtorres6739codefellowship.mtorres6739codefellowship;
+package com.mtorres6739codefellowship.codefellowship;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Mtorres6739codefellowshipApplication {
+public class CodefellowshipApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Mtorres6739codefellowshipApplication.class, args);
+		SpringApplication.run(CodefellowshipApplication.class, args);
 	}
 
 }
