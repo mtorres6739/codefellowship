@@ -2,17 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Header</title>
+    <link rel="stylesheet" href="/css/global.css">
 </head>
 <body>
+
 <ul>
+    <li><a href="/">Home</a></li>
     <li th:if="${applicationUser == null}"><a href="/login">Login</a></li>
     <li th:if="${applicationUser == null}"><a href="/signup">Signup</a></li>
-    <li><a href="/">Home</a></li>
     <li th:if="${applicationUser != null}"><a href="/myprofile">My Profile</a></li>
     <li th:if="${applicationUser != null}"><a href="/logout" th:text="${'Logout ' + applicationUser.firstName}"></a></li>
 
 
 </ul>
+
 </body>
 </html>

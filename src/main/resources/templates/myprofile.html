@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/profile.css">
 </head>
 <body>
 <header>
@@ -10,7 +12,7 @@
 </header>
 
 <main>
-
+<div class="user-welcome"><p th:text="${'Welcome to your Code Fellowship Profile, ' + applicationUser.firstName + '!'}"></p></div>
         <div class="user-details">
             <ul>
                 <div class="user-detail">
@@ -35,5 +37,11 @@
 
 
 </main>
+
+<footer>
+    <div class="foot">
+        <p>&copy; Mathew Torres</p>
+    </div>
+</footer>
 </body>
 </html>

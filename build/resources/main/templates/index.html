@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Code Fellowship</title>
-
+    <link rel="stylesheet" href="/css/global.css">
 
 </head>
 <body>
@@ -18,5 +18,11 @@
     <div th:if="${applicationUser == null}"><p>Join Code Fellowship Today!</p></div>
     <div th:if="${applicationUser != null}"><p th:text="${'Welcome to Code Fellowship ' + applicationUser.firstName + '!'}"></p></div>
 </main>
+
+<footer>
+    <div class="foot">
+        <p>&copy; Mathew Torres</p>
+    </div>
+</footer>
 </body>
 </html>
