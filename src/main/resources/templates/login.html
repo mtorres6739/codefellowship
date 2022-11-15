@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+<header>
+    <div th:replace="/fragments/header :: ul"></div>
+</header>
+
+<main>
+    <div id="title">
+        <h1>Code Fellowship</h1>
+    </div>
+
+    <form action="/login" method="post">
+        <h2>Login</h2>
+        <fieldset>
+            <label>Username</label>
+            <input type="text" name="username" required>
+
+            <label>Password</label>
+            <input type="text" name="password" required>
+
+            <input class="button" type="submit" value="Submit">
+        </fieldset>
+
+        <a class="no-account-verbiage" href="/signup">No Account? Sign up!</a>
+
+    </form>
+</main>
+
+</body>
+</html>

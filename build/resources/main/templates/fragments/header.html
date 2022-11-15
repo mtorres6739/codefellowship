@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li th:if="${applicationUser == null}"><a href="/login">Login</a></li>
+    <li th:if="${applicationUser == null}"><a href="/signup">Signup</a></li>
+    <li><a href="/">Home</a></li>
+    <li th:if="${applicationUser != null}"><a href="/myprofile">My Profile</a></li>
+    <li th:if="${applicationUser != null}"><a href="/logout" th:text="${'Logout ' + applicationUser.firstName}"></a></li>
+
+
+</ul>
+</body>
+</html>
