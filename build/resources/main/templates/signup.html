@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang=“en” xmlns:th=“http://www.tymeleaf.org”>
+<head>
+    <meta charset="UTF-8">
+    <title>Signup</title>
+</head>
+<body>
+<header>
+    <div th:replace="/fragments/header :: ul"></div>
+</header>
+
+<main>
+    <div id="title">
+        <h1>Code Fellowship</h1>
+    </div>
+
+    <Form action="/createuser" method="post">
+        <fieldset>
+            <legend>Sign Up</legend>
+            <div class="signup">
+                <div class="input">
+                    <label>Username</label>
+                    <input type="text" name="username" required>
+                </div>
+                <div class="input">
+                    <label>Password</label>
+                    <input type="password" name="password" required>
+                </div>
+            </div>
+            <div class="signup">
+                <div class="input">
+                    <label>First Name</label>
+                    <input type="text" name="firstName" required>
+                </div>
+                <div class="input">
+                    <label>Last Name</label>
+                    <input type="text" name="lastName" required>
+                </div>
+            </div>
+            <label>Date of Birth</label>
+            <input type="date" name="date" required>
+            <input class="button" type="submit" value="Create Account">
+        </fieldset>
+    </Form>
+
+</main>
+
+
+
+</body>
+</html>

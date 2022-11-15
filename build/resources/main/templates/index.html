@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang=“en” xmlns:th=“http://www.tymeleaf.org”>
+<head>
+    <meta charset="UTF-8">
+    <title>Code Fellowship</title>
+
+
+</head>
+<body>
+<header>
+    <div th:replace="/fragments/header :: ul"></div>
+</header>
+
+<main>
+    <div id="title">
+        <h1>Code Fellowship</h1>
+    </div>
+    <div th:if="${applicationUser == null}"><p>Join Code Fellowship Today!</p></div>
+    <div th:if="${applicationUser != null}"><p th:text="${'Welcome to Code Fellowship ' + applicationUser.firstName + '!'}"></p></div>
+</main>
+</body>
+</html>
