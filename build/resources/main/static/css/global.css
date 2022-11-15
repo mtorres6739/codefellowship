@@ -1,0 +1,129 @@
+/* GRID AREA*/
+
+body {
+  display: grid;
+  grid-template-areas:
+    'header'
+    'main'
+    'footer';
+  grid-template-rows: 100px 1fr 100px;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+}
+
+header,
+footer,
+main {
+  color: cadetblue;
+  padding: 10px;
+  border: solid 1px red;
+}
+
+header {
+  grid-area: header;
+
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+  align-items: center;
+}
+
+.foot {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
+/* HEADER*/
+
+header {
+  background-color: #FFFFFF90;
+  
+}
+
+header ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+header ul li {
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: green;
+}
+
+
+/* FORMS*/
+
+form {
+  border: none;
+  padding: 25px;
+  border-radius: 15px;
+}
+
+legend {
+  padding: 8px;
+  font-size: 24px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: solid thin black;
+}
+
+input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: solid thin black;
+}
+
+input[type=date] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: solid thin black;
+}
+
+.button {
+  background-color: #04AA6D;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 25px;
+}
