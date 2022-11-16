@@ -1,21 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang=“en” xmlns:th=“http://www.tymeleaf.org”>
+
 <head>
     <meta charset="UTF-8">
     <title>Header</title>
     <link rel="stylesheet" href="/css/global.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 <body>
 
-<ul>
-    <li><a href="/">Home</a></li>
-    <li th:if="${applicationUser == null}"><a href="/login">Login</a></li>
-    <li th:if="${applicationUser == null}"><a href="/signup">Signup</a></li>
-    <li th:if="${applicationUser != null}"><a href="/myprofile">My Profile</a></li>
-    <li th:if="${applicationUser != null}"><a href="/logout" th:text="${'Logout ' + applicationUser.firstName}"></a></li>
-
-
-</ul>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">Code Fellowship</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="/allusers">All Users</a>
+                </li> -->
+                <li class="nav-item" th:if="${applicationUser == null}">
+                    <a class="nav-link" href="/login">Login</a>
+                </li>
+                <li class="nav-item" th:if="${applicationUser == null}">
+                    <a class="nav-link" href="/signup">Signup</a>
+                </li>
+                <li class="nav-item" th:if="${applicationUser != null}">
+                    <a class="nav-link" href="/myprofile">My Profile</a>
+                </li>
+                <li class="nav-item" th:if="${applicationUser != null}">
+                    <a class="nav-link" href="/allusers">All Users</a>
+                </li>
+                <li class="nav-item" th:if="${applicationUser != null}">
+                    <a class="nav-link" href="/myfeed">My Feed</a>
+                </li>
+                <li class="nav-item" th:if="${applicationUser != null}">
+                    <a class="nav-link" href="/logout" th:text="${'Logout ' + applicationUser.firstName}"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
 </body>
 </html>

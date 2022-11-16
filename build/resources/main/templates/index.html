@@ -1,28 +1,41 @@
 <!DOCTYPE html>
 <html lang=“en” xmlns:th=“http://www.tymeleaf.org”>
+
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Code Fellowship</title>
-    <link rel="stylesheet" href="/css/global.css">
+    <!-- <link rel="stylesheet" href="/css/global.css"> -->
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
 </head>
+
 <body>
-<header>
-    <div th:replace="/fragments/header :: ul"></div>
-</header>
+    <header>
+        <div th:replace="/fragments/header :: body"></div>
+    </header>
 
-<main>
-    <div id="title">
-        <h1>Code Fellowship</h1>
-    </div>
-    <div th:if="${applicationUser == null}"><p>Join Code Fellowship Today!</p></div>
-    <div th:if="${applicationUser != null}"><p th:text="${'Welcome to Code Fellowship ' + applicationUser.firstName + '!'}"></p></div>
-</main>
+    <main>
+        <div class="container">
+            <div class="mt-4 mb-4">
+                <h2 th:if="${applicationUser == null}">Welcome to Code Fellowship. Join Our Community!</h2>
+                <h2 th:if="${applicationUser != null}"
+                    th:text="${'Welcome to Code Fellowship, ' + applicationUser.firstName + '!'}"></h2>
+            </div>
+            <div th:if="${applicationUser == null}">
+                <p>Enjoy a community of like-minded tech enthusiast. Share ideas and change the world!</p>
+            </div>
+            <div th:if="${applicationUser != null}">
+                <p th:text="${applicationUser.firstName + ', get ready to help bring visions to life!'}"></p>
+            </div>
+        </div>
+    </main>
 
-<footer>
-    <div class="foot">
-        <p>&copy; Mathew Torres</p>
-    </div>
-</footer>
+    <footer>
+        <div th:replace="/fragments/footer :: body"></div>
+    </footer>
 </body>
+
 </html>
