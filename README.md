@@ -37,4 +37,6 @@ This is a simple social media site for developers. Users can create an account, 
 * [Spring Security Docs](https://docs.spring.io/spring-security/site/docs/current/reference/html5/)
 * [Spring Data JPA Docs](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/)
 * [Thymeleaf Docs](https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html)
+* [Random Profile Image Rotator](https://pravatar.cc/)
+<!-- * [Profile Image Placeholder](https://ashallendesign.co.uk/blog/13-placeholder-avatar-and-image-websites) -->
 * [Github Ben](https://github.com/akkanben)
