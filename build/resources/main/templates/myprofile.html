@@ -22,7 +22,7 @@
             <div class="mt-4 mb-4">
                 <h2 th:text="${'Welcome to your Code Fellowship Profile, ' + applicationUser.firstName + '!'}"></h2>
             </div>
-            
+
 
 
 
@@ -35,9 +35,14 @@
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                            <h5 class="card-title" th:text="${applicationUser.firstName + ' ' + applicationUser.lastName}">Card title</h5>
+                            <h5 class="card-title"
+                                th:text="${applicationUser.firstName + ' ' + applicationUser.lastName}">Card title</h5>
                             <p class="card-text" th:text="${applicationUser.bio}"></p>
-                            <p class="card-text"><small class="text-muted">Username:</small><small class="text-muted" th:text="${' ' + applicationUser.username + ' | '}"></small><small class="text-muted">Date of Birth:</small><small class="text-muted" th:text="${' ' + applicationUser.dateOfBirth}"></small></p>
+                            <p class="card-text"><small class="text-muted">Username:</small><small class="text-muted"
+                                    th:text="${' ' + applicationUser.username + ' | '}"></small><small
+                                    class="text-muted">Date of Birth:</small><small class="text-muted"
+                                    th:text="${' ' + applicationUser.dateOfBirth}"></small></p>
+                        
                         </div>
                     </div>
                 </div>

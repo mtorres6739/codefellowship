@@ -27,7 +27,21 @@ This is a simple social media site for developers. Users can create an account, 
 
 ### Profile
 
-`/myprofile`
+`/profile`
+
+### My Profile
+  
+  `/myprofile`
+
+### Users
+
+`/allusers`
+
+### Feed
+
+`/myfeed`
+
+
 
 ## Resources
 
